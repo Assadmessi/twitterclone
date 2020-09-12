@@ -1,3 +1,7 @@
-const arr = ['Ann', 'Bob', 'John', 10, true, [1, 2, 3] ];
-console.log(arr);
-console.log(arr[0]);
+const newEl = document.createElement('li');
+// console.log(newEl);
+
+const text = document.createTextNode('Blog');
+// console.log(text);
+
+newEl.app
