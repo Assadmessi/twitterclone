@@ -52,8 +52,8 @@
 					<i class="fas fa-dove"></i>
 					<h1>explore what's happening in the world</h1>
 					<h4>Join Twirrer today</h4>
-					<button type="button" class="sign-up">Sign Up</button>
-					<button type="button" class="log-in">Log In</button>
+					<button type="button" class="sign-up main-btn">Sign Up</button>
+					<button type="button" class="log-in main-btn">Log In</button>
 				</div>
 		</div>
 		<!-- end of right -->
@@ -96,8 +96,8 @@
 			<div class="login-content">
 				<h2>Login in to Twirrer</h2>
 				<form class="login-form">
-					<input type="text" placeholder="Phone, email, or username">
-					<input type="password" placeholder="password">
+					<input type="text" placeholder="Phone, email, or username" class="login-user-info">
+					<input type="password" placeholder="password" class="login-password">
 					<div>
 						<button type="button" class="login-form-btn">Log In</button>
 						<input type="checkbox" class="login-form-checkbox" id="check">
@@ -112,6 +112,13 @@
 			</footer>
 		</div>
 		<!-- end of login -->
+
+		<!-- login model -->
+		<div class="login-modal">
+			<i class="fas fa-times"></i>
+			<p>The username and password you entered did not match our records. Please double check and try angain</p>
+		</div>
+		<!-- login model -->
 	</section>
 	<!-- end of login page -->
 
@@ -330,6 +337,34 @@
 
 		<button type="button" class="post-btn">+<i class="fas fa-feather-alt"></i>Post</button>
 	</section>
+
+	<!-- post model -->
+	<div class="modal-wrapper">
+		<div class="modal">
+			<div class="modal-header">
+				<i class="fas fa-times"></i>
+				<button type="button">Post</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-img">
+					<img src="images/user1.jpg">
+				</div>
+				<input type="text" placeholder="What's happening?" class="modal-input">
+				<i class="far fa-smile"></i>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-icons">
+					<i class="far fa-image"></i>
+					<i class="fas fa-camera"></i>
+					<i class="far fa-chart-bar"></i>
+					<span>+</span>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- end of post modal -->
 	<!-- end of feeeds page -->
+
+	<script src="script.js"></script>
 </body>
 </html>
