@@ -11,6 +11,9 @@ const postBtn = document.querySelector('.post-btn');
 const modalWarpper = document.querySelector('.modal-wrapper');
 const modal = document.querySelector('.modal');
 const postModalX = document.querySelector('.modal-header  i');
+const modalPostBtn = document.querySelector('.modal-header-button');
+const modalFooterPlus = document.querySelector('.modal-footer-span');
+const modalInput = document.querySelector('.modal-input');
 /******************************************************/
 /******************************************************/
 
@@ -72,4 +75,32 @@ postBtn.addEventListener('click', () =>
 	modalWarpper.classList.add('modal-wrapper-display');
 });
 
-postModalX.addEventListener()
+const changeOpacity = x => {
+	modalPostBtn.style.opacity = x;
+	modalFooterPlus.style.opacity = x;
+}
+
+postModalX.addEventListener('click', () => 
+{
+	modal.style.display = 'none';
+	modalWarpper.classList.remove('modal-wrapper-display');
+
+	if(modalInput.value !== ""){
+		modalInput.value = "";
+		changeOpacity(0.5);
+	}
+});
+
+modalInput.addEventListener('keypress', (e) => 
+{
+	if(e.target.value !== ""){
+		changeOpacity(1);
+	}
+});
+
+modalInput.addEventListener('blur', (e) => 
+{
+	if(e.target.value === ""){
+		changeOpacity(0.5);
+	}
+});
